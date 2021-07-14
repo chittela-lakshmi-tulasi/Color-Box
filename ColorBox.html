@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container{
+            display: grid;
+            padding: 10px;
+            width: 500px;
+            height: 500px;
+            margin-left: 35%;
+            grid-template-columns: auto auto auto;
+            background-color:white;
+            border-radius: 20px;
+        }
+        #grid-item1,#grid-item2,#grid-item3,#grid-item7,#grid-item8,#grid-item9,#grid-item4,#grid-item5,#grid-item6
+        {
+            background-color: #097418cc;
+            border: 1px solid rgb(0,0,0,0.8);
+            padding: 10px;
+            box-shadow:5px 7px black;
+            margin: 15px;
+            border-radius: 50%;
+            display: inline-grid;
+        }
+        
+     
+    </style>
+</head>
+<body style="background-color: black;">
+    <h3 align="center" style="color: aliceblue;font-size: 30px;">This is my Color Box</h3>
+    <br>
+    <div align="center" class="grid-container" >
+        <div id="grid-item1"></div>
+        <div id="grid-item2"></div>
+        <div id="grid-item3"></div>
+        <div id="grid-item4"></div>
+        <div id="grid-item5"></div>
+        <div id="grid-item6"></div>
+        <div id="grid-item7"></div>
+        <div id="grid-item8"></div>
+        <div id="grid-item9"></div>
+    </div>
+    <br>
+    <br><br>
+    <div align="center">
+        <button onclick="change()" style="width: 60px;height: 30px;"><b>Click</b></button>
+    </div>
+    
+   
+    <script>
+        function change()
+        {
+            var r=Math.floor(Math.random()*255);
+            var g=Math.floor(Math.random()*255);
+            var b=Math.floor(Math.random()*255);
+            var mycolor1="rgb("+r+","+g+","+b+")"
+            var mycolor2="rgb("+r+","+b+","+g+")"
+            var mycolor3="rgb("+g+","+b+","+r+")"
+            var mycolor4="rgb("+g+","+r+","+b+")"
+            var mycolor5="rgb("+r+","+g+","+r+")"
+            var mycolor6="rgb("+g+","+r+","+b+")"
+            var mycolor7="rgb("+b+","+r+","+g+")"
+            var mycolor8="rgb("+g+","+r+","+g+")"
+            var mycolor9="rgb("+b+","+g+","+r+")"
+            
+            //To set colors for the boxes.
+            document.getElementById("grid-item1").style.backgroundColor=mycolor1;
+            document.getElementById("grid-item2").style.backgroundColor=mycolor2;
+            document.getElementById("grid-item3").style.backgroundColor=mycolor3;
+            document.getElementById("grid-item4").style.backgroundColor=mycolor4;
+            document.getElementById("grid-item5").style.backgroundColor=mycolor5;
+            document.getElementById("grid-item6").style.backgroundColor=mycolor6;
+            document.getElementById("grid-item7").style.backgroundColor=mycolor7;
+            document.getElementById("grid-item8").style.backgroundColor=mycolor8;
+            document.getElementById("grid-item9").style.backgroundColor=mycolor9;
+        }
+        change();
+     
+</script>
+    
+</body>
+</html>
